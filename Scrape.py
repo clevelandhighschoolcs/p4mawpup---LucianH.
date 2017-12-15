@@ -11,6 +11,13 @@ auth_token = #Put Auth token Here
 twilio_phone_number = #Put Twilio phone number here
 my_phone_number = #
 
+text = raw_input("Would you like to connect a Twilio account to get a text message if there is a change?")
+if text.lower() == 'y' or text.lower() == 'yes':
+	account_sid = raw_input("Twilio account sid")
+	auth_token = raw_input("Twilio authentication token")
+	twilio_phone_number = raw_input("+" + "twilio phone number")
+	my_phone_number = raw_input("+" + "Your phone number")
+
 
 
 # this is an optional parameter for the frequency you wish 
