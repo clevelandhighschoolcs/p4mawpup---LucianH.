@@ -6,10 +6,10 @@ from twilio.rest import TwilioRestClient
 
 
 url = 'https://postmates.com/los-angeles'
-account_sid = 'AC05a19e314e2e0a36da9d8966556c359c'
-auth_token = 'Respective Token'
-twilio_phone_number = 'Hosts #'
-my_phone_number = 'Client'
+account_sid = #Your SID
+auth_token = #Put Auth token Here
+twilio_phone_number = #Put Twilio phone number here
+my_phone_number = #
 
 
 
