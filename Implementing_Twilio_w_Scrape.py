@@ -1,8 +1,8 @@
 from urllib2 import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 import time 
-import twilio 
-import twilio.rest 
+import requests
+from twilio.rest import TwilioRestClient
 
 
 url = 'https://postmates.com/los-angeles'
@@ -35,19 +35,10 @@ def main():
     initial_result = len(href_tags)
     time.sleep(10)
     href_tags = page_soup.find_all(href=True)
-    new_result = len(href_tags)
-    print (new_result - initial_result) # tell you how many links were added or removed 
     if new_result - initial_result == 0:
         print ("no change")
-    elif new_result - initial_result < 0 or new_result - initial_result > 0:
-        client = twilio.rest.Client('AC05a19e314e2e0a36da9d8966556c359c', 'auth_token')
-    
-        client.messages.create(
-            body="Google just changed something on their homepage",
-            to=my_phone_number,
-            from_=twilio_phone_number
-            )
-
+    elif new_result - initial_result > 0 or new_result - initial_result < 0:
+        print("change")
     else:
         print ("nothing noticed")
    
