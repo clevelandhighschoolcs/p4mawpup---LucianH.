@@ -1,7 +1,7 @@
 from urllib2 import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 import time 
-import twilio 
+import twilio #the module importation should be updated.
 import twilio.rest 
 
 
@@ -39,6 +39,7 @@ def main():
     print (new_result - initial_result) # tell you how many links were added or removed 
     if new_result - initial_result == 0:
         print ("no change")
+     #implementation of twilio...
     elif new_result - initial_result < 0 or new_result - initial_result > 0:
         client = twilio.rest.Client('AC05a19e314e2e0a36da9d8966556c359c', '8cf175a0d0d3587e9a8ceece40bfa2c6')
     
