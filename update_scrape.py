@@ -40,7 +40,7 @@ def main():
     if new_result - initial_result == 0:
         print ("no change")
     elif new_result - initial_result < 0 or new_result - initial_result > 0:
-        client = twilio.rest.Client('AC05a19e314e2e0a36da9d8966556c359c', '8cf175a0d0d3587e9a8ceece40bfa2c6')
+        client = twilio.rest.Client('AC05a19e314e2e0a36da9d8966556c359c', 'auth_token')
     
         client.messages.create(
             body="Google just changed something on their homepage",
