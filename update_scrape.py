@@ -5,7 +5,7 @@ import twilio
 import twilio.rest 
 
 
-url = 'https://postmates.com/los-angeles'
+
 account_sid = 'AC05a19e314e2e0a36da9d8966556c359c'
 auth_token = 'What ever'
 twilio_phone_number = 'Theirs'
