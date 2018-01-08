@@ -14,13 +14,14 @@ my_phone_number = 'Yours'
 
 
 # this is an optional parameter for the frequency you wish 
-alloted_time  = 10
+alloted_time  = input("Scraping rate (seconds): ")
 #this is an optional parameter for the duration you wish the search to occur, the default is one day
 duration = 86400
 
 #the following bit is for use in the while loop 
 iteration = 0; 
-my_url = 'https://www.google.com'
+webinput = raw_input("Website: http://")
+my_url = ("http://" + webinput)
 #optional parameters of time can be changed here:
 
 #connection 
@@ -33,7 +34,7 @@ def main():
     page_soup = soup(page_html, "html.parser")
     href_tags = page_soup.find_all(href=True)
     initial_result = len(href_tags)
-    time.sleep(10)
+    time.sleep(alloted_time)
     href_tags = page_soup.find_all(href=True)
     new_result = len(href_tags)
     print (new_result - initial_result) # tell you how many links were added or removed 
